@@ -6,9 +6,9 @@ A full-stack job portal application built with React, Node.js, Express, Prisma, 
 
 ## 🌐 Live Links
 
-Frontend: https://your-frontend.vercel.app
+Frontend: https://talentmatch-ai-theta.vercel.app
 
-Backend: https://your-backend.onrender.com
+Backend: https://talentmatch-ai-z4qa.onrender.com
 
 ---
 
