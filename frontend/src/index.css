@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* TAILWIND CORE */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ROOT */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* BASE BODY */
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+
+  background: #f8fafc;
+  color: #0f172a;
+
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* DARK MODE */
+.dark body {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+/* LINKS */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON RESET */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* INPUT */
+input,
+select,
+textarea {
+  font-family: inherit;
+  outline: none;
+
+  background: white;
+  color: #0f172a;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* FOCUS */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* SELECTION */
+::selection {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ROOT LAYOUT */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: 0.2s;
+}
+
+.dark .card {
+  background: #111827;
+  border-color: #1f2937;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.dark .btn-secondary {
+  background: #334155;
+  color: #f1f5f9;
+}
