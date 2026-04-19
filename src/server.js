@@ -16,28 +16,25 @@ import { protect } from "./middleware/protect.js";
 dotenv.config();
 
 const app = express();
-
-/* HTTP SERVER (IMPORTANT FOR SOCKET) */
 const server = http.createServer(app);
 
-/* SOCKET.IO SETUP */
+/* SOCKET.IO */
 const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
       "http://localhost:5175",
-      "https://your-frontend.vercel.app",
+      "https://talentmatch-ai-theta.vercel.app"
     ],
     credentials: true,
   },
 });
 
-/* make io available in routes */
 app.set("io", io);
 
 io.on("connection", (socket) => {
-  console.log("🔵 User connected:", socket.id);
+  console.log("User connected:", socket.id);
 
   socket.on("disconnect", () => {
     console.log("User disconnected:", socket.id);
@@ -51,7 +48,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174",
       "http://localhost:5175",
-      "https://your-frontend.vercel.app",
+      "https://talentmatch-ai-theta.vercel.app"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
@@ -78,7 +75,7 @@ app.get("/", (req, res) => {
   res.send("TalentMatch API is running");
 });
 
-/* PROTECTED TEST */
+/* PROTECTED ROUTE */
 app.get("/api/protected", protect, (req, res) => {
   res.json({
     message: "Protected route working",
