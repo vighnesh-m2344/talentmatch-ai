@@ -1,10 +1,10 @@
 # TalentMatch AI – Full Stack Job Portal
 
-A full-stack job portal application built with React, Node.js, Express, Prisma, PostgreSQL, and Redis, featuring authentication, role-based access control, job management, and performance optimization.
+A full-stack job portal application built with React, Node.js, Express, Prisma, PostgreSQL, and Redis, featuring authentication, role-based access control, job management and performance optimization.
 
 ---
 
-## 🌐 Live Links
+## Live Links 🌐
 
 Frontend: https://talentmatch-ai-theta.vercel.app
 
